@@ -2,6 +2,8 @@
 If you encounter the same problem Please allow this way to solve
 first in source code dir where build a new "build" file and cd build
 
+
+code:
 cd D:\opencv_mingw_4.11
 rmdir /s /q build
 mkdir build
