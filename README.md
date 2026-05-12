@@ -1,10 +1,13 @@
 <img width="538" height="366" alt="image" src="https://github.com/user-attachments/assets/5baf8688-dc5c-4080-afad-1f536463c629" />
-```powershell
+If you encounter the same problem Please allow this way to solve
+first in source code dir where build a new "build" file and cd build
+# 1. Inter Source Code dir clean old dir
 cd D:\opencv_mingw_4.11
 rmdir /s /q build
 mkdir build
 cd build
 
+# 2. CMake config（Key：CMAKE_RC_COMPILER Setting Null String）
 cmake .. -G "MinGW Makefiles" `
     -DCMAKE_CXX_COMPILER=C:/Qt/Tools/mingw1310_64/bin/g++.exe `
     -DCMAKE_C_COMPILER=C:/Qt/Tools/mingw1310_64/bin/gcc.exe `
@@ -16,5 +19,5 @@ cmake .. -G "MinGW Makefiles" `
     -DBUILD_TESTS=OFF `
     -DBUILD_EXAMPLES=OFF
 
+# 3. Compile
 mingw32-make -j4
-```
